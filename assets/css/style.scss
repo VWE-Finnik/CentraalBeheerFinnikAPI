@@ -28,18 +28,36 @@ section, .wrapper, .page-content,
     overflow-x: auto !important;
 }
 
-/* Prevent 960px media query from removing styles */
-@media screen and (max-width: 960px) {
+@media print, screen and (max-width: 1590px) {
     div.wrapper {
-        width: auto !important;
-        margin: 0 auto !important;
+        width:auto;
+        margin: 0 auto;
     }
-}
 
-/* Apply the style removal at 1590px instead */
-@media screen and (max-width: 1590px) {
-    div.wrapper {
-        width: auto !important;
-        margin: 0 auto !important;
+    header,section,footer {
+        float: none;
+        position: static;
+        width: auto
+    }
+
+    header {
+        padding-right: 320px
+    }
+
+    section {
+        border: 1px solid #e5e5e5;
+        border-width: 1px 0;
+        padding: 20px 0;
+        margin: 0 0 20px
+    }
+
+    header a small {
+        display: inline
+    }
+
+    header ul {
+        position: absolute;
+        right: 50px;
+        top: 52px
     }
 }
