@@ -3,57 +3,27 @@
 
 @import "jekyll-theme-minimal";
 
-/* Override Jekyll theme styles - Force full width */
-.page-content, .wrapper, .site, .site-content, 
-#main_content, .main-content, .site-main,
-section, main, article, .page, .post {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-}
-
-/* Override container constraints */
-.container, .wrapper, .page-wrapper, .content-wrapper {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-
-/* Remove sidebars and constraints */
-.sidebar, .site-sidebar, aside {
-    display: none !important;
-}
-
-/* Force full height */
-html, body {
-    height: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
+/* Make body a flex container with header and section side by side */
 body {
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-section, main, #main_content {
+/* Header keeps its natural width */
+header, .site-header, .page-header {
+    flex-shrink: 0 !important;
+    width: auto !important;
+}
+
+/* Wrapper/section takes remaining space */
+section, .wrapper, .page-content, 
+#main_content, .main-content, .site-main {
     flex: 1 !important;
-    display: flex !important;
-    flex-direction: column !important;
-}
-
-/* Override any max-width constraints from themes */
-.container, .wrapper, .page-content, 
-.site, .site-content, section, main {
+    width: auto !important;
     max-width: none !important;
-}
-
-/* Ensure images and code blocks can still scale properly */
-img, video, iframe {
-    max-width: 100%;
-    height: auto;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: auto !important;
 }
