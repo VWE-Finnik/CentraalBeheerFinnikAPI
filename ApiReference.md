@@ -1,3 +1,8 @@
+---
+layout: default
+title: Finnik API Documentation
+---
+
 # Finnik API Documentation
 
 ## Base URL
