@@ -23,7 +23,23 @@ section, .wrapper, .page-content,
     flex: 1 !important;
     width: auto !important;
     max-width: none !important;
-    margin: 0 !important;
+    margin: 10px !important;
     padding: 0 !important;
     overflow-x: auto !important;
+}
+
+/* Prevent 960px media query from removing styles */
+@media screen and (max-width: 960px) {
+    div.wrapper {
+        width: auto !important;
+        margin: 0 auto !important;
+    }
+}
+
+/* Apply the style removal at 1590px instead */
+@media screen and (max-width: 1590px) {
+    div.wrapper {
+        width: auto !important;
+        margin: 0 auto !important;
+    }
 }
