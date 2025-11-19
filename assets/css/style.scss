@@ -2,4 +2,8 @@
 ---
 
 @import "jekyll-theme-minimal";
-@import "styleOverride";
+
+.wrapper {
+    width: 100% !important;
+    margin: 0;
+}
